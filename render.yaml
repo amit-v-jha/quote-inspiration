@@ -15,5 +15,5 @@ services:
     name: quotes-web
     rootDir: client
     buildCommand: "npm install && npm run build"
-    staticPublishPath: "client/dist"
+    staticPublishPath: "dist"
 
