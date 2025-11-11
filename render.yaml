@@ -11,7 +11,7 @@ services:
         value: production
       - key: CORS_ORIGIN
         value: "*"
-  - type: static
+  - type: static_site
     name: quotes-web
     rootDir: client
     buildCommand: "npm install && npm run build"
