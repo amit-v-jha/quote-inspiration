@@ -2,9 +2,8 @@ services:
   - type: web
     name: quotes-api
     env: node
-    rootDir: server
-    buildCommand: "npm install"
-    startCommand: "npm start"
+    buildCommand: "cd server && npm install"
+    startCommand: "cd server && npm start"
     plan: free
     envVars:
       - key: NODE_ENV
@@ -13,7 +12,5 @@ services:
         value: "*"
   - type: static_site
     name: quotes-web
-    rootDir: client
-    buildCommand: "npm install && npm run build"
-    staticPublishPath: "dist"
-
+    buildCommand: "cd client && npm install && npm run build"
+    staticPublishPath: "client/dist"
